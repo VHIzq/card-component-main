@@ -1,0 +1,55 @@
+@import "../../colors";
+
+.form-container {
+  max-width: 85%;
+  margin: 0 auto;
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    label {
+      letter-spacing: 2px;
+      font-weight: 700;
+      font-size: 12px;
+    }
+    input {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid $light-grayish-violet;
+
+      &::placeholder {
+        color: $light-grayish-violet;
+      }
+    }
+  }
+
+  .row-data {
+    display: flex;
+    flex-direction: row;
+
+    .col {
+      display: flex;
+      flex-direction: column;
+
+      input {
+        width: 70px;
+        margin-right: 10px;
+      }
+
+      .col-cvc {
+        width: 160px;
+      }
+    }
+  }
+
+  .cta {
+    padding: 15px 0;
+    border-radius: 10px;
+    color: $white;
+    outline: none;
+    font-size: 18px;
+    background-color: $very-dark-violet;
+  }
+}

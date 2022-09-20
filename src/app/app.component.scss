@@ -1,0 +1,95 @@
+@import "../colors";
+@import "../mixins";
+
+@mixin card-mixin($position, $top, $left) {
+  position: $position;
+  top: $top;
+  left: $left;
+}
+
+.card-details {
+  min-width: 375px;
+
+  .imgs-container {
+    background-color: $very-dark-violet;
+    height: 240px;
+
+    .circles-back {
+      position: absolute;
+      color: $white;
+      font-size: 10px;
+      top: 105px;
+      left: 300px;
+      z-index: 100;
+      letter-spacing: 1px;
+    }
+
+    .circles-front--up {
+      position: relative;
+
+      .circle-big {
+        position: absolute;
+        top: 140px;
+        left: 40px;
+        width: 40px;
+        height: 40px;
+        background-color: $white;
+        border-radius: 50%;
+        z-index: 150;
+      }
+
+      .circle-small {
+        position: absolute;
+        top: 150px;
+        left: 90px;
+        width: 15px;
+        height: 15px;
+        border: 1px solid $white;
+        background-color: none;
+        border-radius: 50%;
+        z-index: 150;
+      }
+
+      .circle-number {
+        position: absolute;
+        z-index: 200;
+        color: $white;
+        top: 210px;
+        left: 40px;
+        letter-spacing: 2px;
+      }
+    }
+
+    .details {
+      position: absolute;
+      z-index: 200;
+      color: $white;
+      font-size: 12px;
+      letter-spacing: 2px;
+      top: 240px;
+      left: 40px;
+
+      .name {
+        margin-right: 65px;
+      }
+    }
+
+    .card {
+      max-inline-size: 75%;
+      block-size: auto;
+      object-fit: contain;
+    }
+
+    .card-back {
+      @include card-mixin(relative, 35px, 80px);
+    }
+
+    .card-front {
+      @include card-mixin(relative, -40px, 20px);
+    }
+  }
+
+  .form-container {
+    margin-top: 80px;
+  }
+}
